@@ -1,4 +1,4 @@
-# 🚀 Auto HAT Tool (Hybrid Automation Trainer) 🤖
+# 🚀 Auto ML Tool (Hybrid Automation Trainer) 🤖
 
 
 ---
