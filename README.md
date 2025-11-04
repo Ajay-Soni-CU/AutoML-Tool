@@ -1,140 +1,108 @@
-# 🚀 AutoML Tool (Python + Shiny UI)
+# 🚀 Auto HAT Tool (Hybrid Automation Trainer) 🤖
 
-This repository contains a fully functional **AutoML tool** built using **Python** and the **Shiny for Python** framework. It allows users to upload a CSV dataset, preprocess the data, engineer features, compare multiple models, select and train the best model, and make predictions via an intuitive web interface.
-
----
-
-## 📋 Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Application Flow](#application-flow)
-- [Project Structure](#project-structure)
-- [Future Improvements](#future-improvements)
-- [Contributing](#contributing)
-- [License](#license)
 
 ---
 
-## 📌 Overview
-
-This project aims to simplify the process of applying machine learning models to structured data by providing an easy-to-use GUI for users who may not be familiar with programming. It covers the entire ML workflow including:
-
-- Data Uploading
-- Preprocessing
-- Feature Engineering
-- Model Comparison
-- Model Selection
-- Prediction
-
-The app is hosted locally using the Shiny server in Python and features sidebar-based navigation.
-
----
-
-## 🎯 Features
-
-✅ Upload CSV data directly into the app  
-✅ Impute missing values (Drop, Mean, Median)  
-✅ Change column data types (Integer, Float)  
-✅ Apply encoding (One Hot or Label Encoding)  
-✅ Create polynomial features  
-✅ Select features and target variable  
-✅ Compare regression and classification models  
-✅ Select and train a model  
-✅ Input new data to get predictions  
-
----
-
-## 🛠 Technologies Used
-
-- **Python**  
-- **Shiny for Python**  
-- **Pandas**  
-- **Scikit-learn**  
-- **Nest_asyncio** (for compatibility with Jupyter environments)  
-
----
-
-## 💾 Installation
-
-1. Clone this repository:
-```bash
-git clone https://github.com/yourusername/automl-tool.git
-cd automl-tool
-```
-
-2. Install the required packages:
-```bash
-pip install pandas scikit-learn shiny nest_asyncio
-```
-
----
 
 ## 🚀 Usage
 
-Run the Shiny app using:
+
+Run the Shiny app locally with:
 ```bash
 python app.py
 ```
 
-The app will open in your default browser at `http://localhost:8000`.
+
+Then open your browser and navigate to:
+```
+http://localhost:8000
+```
+
 
 ---
+
 
 ## 🔄 Application Flow
 
-1. **Upload File** – Upload your CSV file.
-2. **Impute Missing Values** – Drop or fill missing data.
-3. **Change Data Types** – Convert columns to int/float.
-4. **Encoding** – Choose between One Hot or Label Encoding.
-5. **Polynomial Features** – Generate interaction and polynomial terms.
-6. **Feature Selection** – Choose input features and target.
-7. **Model Comparison** – Automatically compare suitable models.
-8. **Model Selection** – Choose the best model and train.
-9. **Prediction** – Enter custom feature values to predict the target.
+
+1. **Data Upload** – Upload a CSV or Excel file.
+2. **Preprocessing** – Handle missing data, outliers, and datatype corrections.
+3. **Feature Engineering** – Encoding, scaling, polynomial, or interaction features.
+4. **Model Comparison** – Automatically compare top ML models (SVC, XGBoost, RF, etc.).
+5. **Hybrid Training** – Apply feedback logic for adaptive learning.
+6. **Model Selection** – Choose and save the best-performing model.
+7. **Prediction** – Enter new feature values to generate predictions instantly.
+8. **Export Results** – Download model files, charts, and performance reports.
+
 
 ---
 
+
 ## 📁 Project Structure
+
 
 ```bash
 .
-├── app.py                  # Main Shiny app file
-├── auto_ml_functions.py    # (Optional) Logic separation for reusability
-├── README.md
+├── app.py # Shiny app entry point
+├── modules/
+│ ├── preprocessing.py # Missing values, scaling, encoding
+│ ├── model_selection.py # Model comparison and selection logic
+│ ├── reinforcement.py # Adaptive logic module
+│ ├── visualization.py # Dynamic charts and evaluation metrics
+├── static/ # Styles and frontend assets
+├── models/ # Saved models and logs
+├── README.md # Documentation
 ```
+
+
+---
 
 
 ## 📈 Future Improvements
 
-- Add more advanced preprocessing methods (scaling, normalization)
-- Hyperparameter tuning options
-- Evaluation metrics dashboard
-- Export trained model
-- Save user sessions
+
+- Integrate **Deep Learning (ANN, CNN)** via Keras/TensorFlow backend
+- Add **Explainable AI (XAI)** support using SHAP or LIME
+- Include **time-series forecasting** capability
+- Add **multi-user session tracking** with login system
+- Enable **automatic hyperparameter optimization** using Optuna or Ray Tune
+- Develop **Dockerized deployment** for scalable hosting
+
 
 ---
+
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please fork the repository and create a pull request. You can also open issues for bugs or feature requests.
+
+We welcome contributions! Follow these steps:
+1. Fork this repository
+2. Create a new feature branch (`git checkout -b feature-name`)
+3. Commit your changes (`git commit -m 'Add new feature'`)
+4. Push to your branch (`git push origin feature-name`)
+5. Open a pull request
+
 
 ---
+
 
 ## 📄 License
 
+
 This project is licensed under the [MIT License](LICENSE).
 
+
 ---
+
 
 ## 👨‍💻 Author
 
-**Ajay Soni** 
+
+**Ajay Soni**
+*BCA (Hons.) Data Science Student @ Chandigarh University, Unnao*
+
 
 ---
 
-Give a ⭐ if you found this project helpful!
 
+⭐ If this project inspired or helped you, consider giving it a **Star** on GitHub!
