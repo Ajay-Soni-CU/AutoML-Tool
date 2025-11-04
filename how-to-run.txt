@@ -1,0 +1,23 @@
+# Auto ML Tool - Quick Setup Guide
+
+Required Python Libraries:
+--------------------------
+shiny
+pandas
+scikit-learn
+numpy
+
+Installation Commands (Run in Windows PowerShell):
+--------------------------------------------------
+pip install shiny
+pip install pandas
+pip install scikit-learn
+pip install numpy
+
+To Run the App:
+---------------
+1. Navigate to the folder containing your app file (example: app.py)
+   cd path\to\your\project
+
+2. Run the app using:
+   shiny run --reload app.py
